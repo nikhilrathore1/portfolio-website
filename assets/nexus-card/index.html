@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Rathore | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --theme-color: #8b5cf6;
+            /* Tirth's Purple Theme */
+            --bg-color: #000000;
+            --card-bg: #000000;
+            --font-unbounded: "Unbounded", ui-sans-serif, system-ui, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-unbounded);
+            background-color: var(--bg-color);
+            color: white;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Dynamic Theme Utilities */
+        .dynamic-theme-color {
+            color: var(--theme-color);
+        }
+
+        .dynamic-border {
+            border-color: var(--theme-color);
+        }
+
+        /* 3D Card Container */
+        .card-3d {
+            position: relative;
+            background: var(--card-bg);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            width: 100%;
+            max-width: 430px;
+            margin: auto;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Skill Tags */
+        .skill-tag {
+            transition: all 0.3s ease;
+            background: rgba(139, 92, 246, 0.05);
+            border: 1px solid var(--theme-color);
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            background: rgba(139, 92, 246, 0.2);
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Profile Image Glow */
+        .profile-image {
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+            border: 2px solid var(--theme-color);
+        }
+
+        /* Background Grid */
+        .grid-background {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+            background-image:
+                linear-gradient(rgba(139, 92, 246, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 92, 246, 0.07) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-move 20s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        /* Navigation Button */
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 99px;
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            color: white;
+            border-color: var(--theme-color);
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <div class="fixed top-5 left-5 z-50">
+        <a href="#" class="nav-btn">
+            <i class="fas fa-code"></i>
+            <span>Portfolio</span>
+        </a>
+    </div>
+
+    <div class="App min-h-screen flex items-center justify-center py-10">
+        <div class="fixed inset-0 bg-black -z-20"></div>
+        <div class="grid-background"></div>
+
+        <div class="w-full px-4 fade-in">
+            <div id="profileCard"
+                class="card-3d rounded-3xl overflow-hidden shadow-2xl transition-all duration-100 ease-out">
+
+                <div class="h-[140px] w-full relative border-b border-purple-500/30">
+                    <img id="bannerImage"
+                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop"
+                        alt="Banner" class="w-full h-full object-cover opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90"></div>
+                </div>
+
+                <div class="relative px-6 pb-8 -mt-12 flex flex-col items-center text-center z-10">
+
+                    <div class="mb-4">
+                        <img id="profileImage" src="https://github.com/nikjhilrathore1.png" alt="Profile"
+                            class="w-[110px] h-[110px] rounded-full profile-image object-cover bg-black">
+                    </div>
+
+                    <h1 class="text-2xl font-bold text-white tracking-wide">Nikhil Rathore</h1>
+                    <p class="text-purple-400 text-sm mt-1 font-medium">@nikjhilrathore1</p>
+                    <div class="mt-3 px-4 py-1.5 rounded-full bg-purple-900/20 border border-purple-500/20">
+                        <p class="text-gray-300 text-xs tracking-wider uppercase font-semibold">Full Stack Developer</p>
+                    </div>
+
+                    <div id="skillsContainer" class="mt-6 flex justify-center flex-wrap gap-3">
+                    </div>
+
+                    <div class="mt-6 flex items-center gap-2 text-gray-500 text-xs">
+                        <i class="fas fa-map-pin text-purple-500 animate-bounce"></i>
+                        <span>Indore, India</span>
+                    </div>
+
+                    <div id="socialLinksContainer" class="mt-8 flex gap-6 items-center justify-center">
+                    </div>
+
+                    <div class="mt-10 w-full pt-6 border-t border-gray-800">
+                        <p class="text-[10px] text-gray-600">
+                            © 2025 Nikhil Rathore. <br>
+                            All Rights Reserved.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- NIKHIL'S DATA CONFIGURATION ---
+        const config = {
+            skills: ["Java", "Cybersecurity"],
+            socials: [
+                {
+                    platform: "github",
+                    url: "https://github.com/nikjhilrathore1",
+                    icon: "fab fa-github"
+                },
+                {
+                    platform: "linkedin",
+                    url: "https://www.linkedin.com/in/nikhilrathore14",
+                    icon: "fab fa-linkedin"
+                }
+            ]
+        };
+
+        // --- RENDER FUNCTION ---
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Render Skills
+            const skillsBox = document.getElementById('skillsContainer');
+            config.skills.forEach(skill => {
+                const tag = document.createElement('span');
+                tag.className = 'skill-tag text-purple-300 px-4 py-1.5 rounded-full text-xs font-medium tracking-wide';
+                tag.textContent = skill;
+                skillsBox.appendChild(tag);
+            });
+
+            // 2. Render Socials
+            const socialsBox = document.getElementById('socialLinksContainer');
+            config.socials.forEach(link => {
+                const a = document.createElement('a');
+                a.href = link.url;
+                a.target = '_blank';
+                a.className = 'text-2xl text-gray-400 hover:text-white transition-all duration-300 hover:scale-110';
+                a.innerHTML = `<i class="${link.icon} hover:text-purple-400"></i>`;
+                socialsBox.appendChild(a);
+            });
+
+            // 3. Initialize 3D Tilt Effect
+            const card = document.getElementById('profileCard');
+
+            // Mouse Move Effect
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                // Limit rotation to 10 degrees
+                const rotateX = ((y - centerY) / centerY) * -10;
+                const rotateY = ((x - centerX) / centerX) * 10;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+
+            // Reset on Mouse Leave
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+            });
+        });
+    </script>
+</body>
+
+</html>

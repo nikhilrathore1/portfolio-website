@@ -1,0 +1,45 @@
+{
+    "profile": {
+        "name": "Nikhil Rathore",
+        "tagline": "Full Stack Developer",
+        "location": "Indore, India",
+        "bannerImage": "../ele/card_banner.png",
+        "profileImage": "https://github.com/nikjhilrathore1.png",
+        "themeColor": "#8b5cf6"
+    },
+    "skills": [
+        "Java",
+        "Cybersecurity"
+    ],
+    "socialLinks": [
+        {
+            "platform": "GitHub",
+            "url": "https://github.com/nikjhilrathore1",
+            "icon": "github",
+            "tooltip": "GitHub"
+        },
+        {
+            "platform": "LinkedIn",
+            "url": "https://www.linkedin.com/in/nikhilrathore14",
+            "icon": "linkedin",
+            "tooltip": "LinkedIn"
+        }
+    ],
+    "footer": {
+        "text": "Made by Nikhil Rathore",
+        "url": "https://github.com/nikjhilrathore1",
+        "showHeart": true
+    },
+    "animations": {
+        "enableHover3D": true,
+        "enableRippleEffect": true,
+        "enableParallax": true
+    },
+    "customization": {
+        "cardWidth": "430px",
+        "cardBorderRadius": "24px",
+        "glowIntensity": "20px",
+        "backgroundType": "solid",
+        "backgroundColor": "#000000"
+    }
+}
