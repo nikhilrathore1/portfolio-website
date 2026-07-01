@@ -816,43 +816,25 @@ class PortfolioApp {
             ];
         } catch (error) {
             console.error('Error loading projects:', error);
-            // Fallback projects and categories
+            // Fallback projects and categories (used only if projects.json fails to load)
             this.projects = [
                 {
                     id: 1,
-                    title: "Modern Portfolio Website",
-                    description: "A responsive personal website showcasing projects with modern design patterns and animations.",
-                    technologies: ["HTML5", "CSS3", "JavaScript", "Modern Design"],
+                    title: "Real-Time Vehicle Tracking",
+                    description: "A Progressive Web App for real-time city-bus tracking with live map positions, ETA predictions, route planning, and an admin dashboard.",
+                    technologies: ["Next.js", "TypeScript", "Leaflet"],
                     category: "web",
-                    githubUrl: "https://github.com/rushhiii/portfolio",
-                    liveUrl: "#",
-                    featured: true
-                },
-                {
-                    id: 2,
-                    title: "Task Management System",
-                    description: "Full-stack web application for task management with real-time updates and user authentication.",
-                    technologies: ["React", "Node.js", "MongoDB", "Express"],
-                    category: "web",
-                    githubUrl: "https://github.com/rushhiii/task-manager",
-                    liveUrl: "#",
-                    featured: true
-                },
-                {
-                    id: 3,
-                    title: "AI Chatbot Assistant",
-                    description: "Intelligent chatbot using natural language processing for automated customer support.",
-                    technologies: ["Python", "Machine Learning", "NLP", "TensorFlow"],
-                    category: "ai",
-                    githubUrl: "https://github.com/rushhiii/ai-chatbot",
-                    liveUrl: "#",
+                    image: "./assets/projects/vehicle_tracker.png",
+                    githubUrl: "https://github.com/nikhilrathore1/real-time-vehicle-tracking-system",
+                    liveUrl: "https://v0-citybuslivemain1.vercel.app",
+                    liveLabel: "Live Demo",
+                    liveIcon: "fas fa-arrow-up-right-from-square",
                     featured: true
                 }
             ];
             this.categories = [
-                { id: "all", name: "All", icon: "fas fa-th-large", visible: true },
-                { id: "web", name: "Web Dev", icon: "fas fa-globe", visible: true },
-                { id: "automation", name: "Automation", icon: "fas fa-robot", visible: true }
+                { id: "all", name: "All Projects", icon: "fa-solid fa-layer-group", visible: true },
+                { id: "web", name: "Web Dev", icon: "fa-solid fa-globe", visible: true }
             ];
         }
     }

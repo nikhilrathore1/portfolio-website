@@ -3,27 +3,14 @@
     {
       "id": 1,
       "title": "Real-Time Vehicle Tracking",
-      "description": "A software-based vehicle tracking system simulation that visualizes routes and real-time location data on a map interface.",
-      "technologies": ["Java", "Google Maps API", "MySQL"],
-      "category": "software",
-      "image": "./assets/projects/vehicle_tracker.png",
-      "githubUrl": "https://github.com/nikhilrathore1/real-time-vehicle-tracking-system.git",
-      "liveUrl": "#",
-      "liveLabel": "View",
-      "liveIcon": "fas fa-eye",
-      "featured": true
-    },
-    {
-      "id": 2,
-      "title": "Digital Calculator",
-      "description": "A responsive web-based calculator that handles standard arithmetic operations with a clean, modern user interface.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
+      "description": "A Progressive Web App for real-time city-bus tracking with live map positions, ETA predictions, route planning, service alerts, and an admin dashboard.",
+      "technologies": ["Next.js", "TypeScript", "Leaflet"],
       "category": "web",
-      "image": "./assets/projects/calculator.png",
-      "githubUrl": "#",
-      "liveUrl": "#",
-      "liveLabel": "View",
-      "liveIcon": "fas fa-eye",
+      "image": "./assets/projects/vehicle_tracker.png",
+      "githubUrl": "https://github.com/nikhilrathore1/real-time-vehicle-tracking-system",
+      "liveUrl": "https://v0-citybuslivemain1.vercel.app",
+      "liveLabel": "Live Demo",
+      "liveIcon": "fas fa-arrow-up-right-from-square",
       "featured": true
     }
   ],
@@ -38,12 +25,6 @@
       "id": "web",
       "name": "Web Dev",
       "icon": "fa-solid fa-globe",
-      "visible": true
-    },
-    {
-      "id": "software",
-      "name": "Software",
-      "icon": "fa-solid fa-laptop-code",
       "visible": true
     }
   ]
