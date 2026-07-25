@@ -11,7 +11,7 @@ My personal developer portfolio — a responsive, single-page site with dark/lig
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat" alt="License">
 </p>
 
-> **Live Site:** [nikhil-portfolio.netlify.app](https://nikhil-portfolio.netlify.app/)
+> **Live Site:** [nikhil-portfolio.netlify.app](https://nikhilrathore-portfolio.netlify.app/)
 
 ## Features
 
